@@ -27,7 +27,7 @@ Once you have forked the bst260project-template, you must
 
 ## General principles
 
-- You must write a project_plan.qmd that includes
+- You must write a proposal.qmd that includes
 
   - A one-sentence research question, naming one exposure (or a small
     cluster of related exposures) and one outcome. “How does maternal
