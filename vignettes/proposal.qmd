@@ -7,7 +7,7 @@ format: html
 
 To: BST260 Teaching Team, Fall 2026
 
-# Project overvirw
+# Project overview
 This project will analyze two datasets introduced in BST260: the CDC waterborne disease outbreak dataset (waterborne) and the CDC homicide mortality dataset (cdcmurd).
 
 # Dataset 1: the CDC waterborne disease outbreak dataset (waterborne)
@@ -19,10 +19,10 @@ The unit of analysis will be one reported outbreak event. The study population w
 
 ## Exposure definition, coding, and missing data
 The exposure variable will be water_exposure. It will be coded as a categorical variable using the categories documented in the dataset, with drinking water as the reference category if available. Ambiguous or multiple-exposure labels will be handled according to the source documentation rather than assigned arbitrarily.
-Records with missing or unknown water exposure types and missing illness counts will be excluded.  The adjusted analysis will use observations with complete exposure, outcome, and adjustment variables. I will report the number and proportion of excluded records and summarize their available characteristics.
+Records with missing or unknown water exposure types or missing illness counts will be excluded.  The adjusted analysis will use observations with complete exposure, outcome, and adjustment variables. I will report the number and proportion of excluded records and summarize their available characteristics.
 
 ## Outcome definition and type
-The outcome variable will be illnesses, it is a discrete quantitative count.
+The outcome variable will be illnesses, defined as the reported number of people who became ill in each outbreak. It is a discrete quantitative count.
 
 ## Prespecified confounders and adjustment factors
 Potential confounders include year, season, and geographic region.I will adjust for these factors using multivariable regression.
