@@ -6,3 +6,41 @@ format: html
 
 
 To: BST260 Teaching Team, Fall 2026
+
+# Project overvirw
+This project will analyze two datasets introduced in BST260: the CDC waterborne disease outbreak dataset (waterborne) and the CDC homicide mortality dataset (cdcmurd).
+
+# Dataset 1: the CDC waterborne disease outbreak dataset (waterborne)
+## Research question
+Among reported U.S. waterborne disease outbreaks, how is water exposure type associated with the number of reported illnesses per outbreak?
+
+## Unit of analysis and population
+The unit of analysis will be one reported outbreak event. The study population will consist of U.S. waterborne disease outbreaks recorded in the waterborne dataset during its documented coverage period.
+
+## Exposure definition, coding, and missing data
+The exposure variable will be water_exposure. It will be coded as a categorical variable using the categories documented in the dataset, with drinking water as the reference category if available. Ambiguous or multiple-exposure labels will be handled according to the source documentation rather than assigned arbitrarily.
+Records with missing or unknown water exposure types and missing illness counts will be excluded.  The adjusted analysis will use observations with complete exposure, outcome, and adjustment variables. I will report the number and proportion of excluded records and summarize their available characteristics.
+
+## Outcome definition and type
+The outcome variable will be illnesses, it is a discrete quantitative count.
+
+## Prespecified confounders and adjustment factors
+Potential confounders include year, season, and geographic region.I will adjust for these factors using multivariable regression.
+
+# Dataset 2: the CDC homicide mortality dataset (cdcmurd)
+## Research question
+How did annual age-adjusted homicide mortality rates across U.S. states and the District of Columbia change over the years covered by the cdcmurd dataset?
+
+## Unit of analysis and population
+The unit of analysis will be a state-year, with the District of Columbia treated as a separate jurisdiction. The study population will consist of the populations of the 50 U.S. states and the District of Columbia represented in the cdcmurd dataset during its documented coverage period.
+
+## Exposure definition, coding, and missing data
+The primary explanatory variable will be YEAR, representing calendar time rather than a causal exposure. It will be coded as a numerical variable and centered at the first included year. Location will be coded as a categorical variable identifying each jurisdiction.
+
+Records with missing or invalid years, missing jurisdiction identifiers, or missing mortality rates will be excluded from the primary analysis. Missing or suppressed mortality rates will not be treated as zero. I will report the number and proportion of excluded records and summarize their distribution across years and jurisdictions.
+
+## Outcome definition and type
+The outcome variable will be Death.Rate, defined as the annual age-adjusted homicide mortality rate per 100,000 population. It will be analyzed as a continuous quantitative variable.
+
+## Prespecified confounders and adjustment factors
+Potential confunders include jurisdiction and population age structure. I will account for stable differences between jurisdictions using state fixed effects in a regression model and address age differences by using age-adjusted mortality rates.
